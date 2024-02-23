@@ -21,7 +21,7 @@ This repository contains the implementation of user cards with interactive featu
 
 ## Backend - Mockapi.io
 
-A custom backend was created using [Mockapi.io](https://www.mockapi.io/) to simulate user data. The `users` resource includes fields like `id`, `user`, `tweets`, `followers`, and `avatar`. There are 12 users in total with varying values for testing.
+A custom backend was created using [Mockapi.io](https://www.mockapi.io/) to simulate user data. The `users` resource includes fields like `id`, `user`, `tweets`, `followers`, and `avatar`. There are 13 users in total with varying values for testing.
 
 ## Installation
 
@@ -64,11 +64,3 @@ A custom backend was created using [Mockapi.io](https://www.mockapi.io/) to simu
   - **App.tsx:** Main React component.
   - **main.tsx:** Entry point.
   - **styles.scss:** Global styles.
-
-## Author
-
-- [Orest Burmei]
-
-Feel free to explore the code, make improvements, or adapt it to your needs! If you have any questions, please contact [ordila99@gmail.com].
-
-Happy coding!
