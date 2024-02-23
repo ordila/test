@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import Select from "react-select";
+import Select, { SingleValue } from "react-select";
 
 import { Loader, TweetsCard } from "@/components";
 
@@ -19,9 +19,9 @@ const options: ISelectItem[] = [
 ];
 
 export const Tweets: FC = () => {
-  const [tweets, setTweets] = useState<ITweet[] | null>(null);
+  const [tweets, setTweets] = useState<ITweet[]>([]);
 
-  const [filteredTweets, setFilteredTweets] = useState<ITweet[] | null>(null);
+  const [filteredTweets, setFilteredTweets] = useState<ITweet[]>([]);
 
   const [following, setFollowing] = useState<number[]>([]);
 
@@ -39,8 +39,8 @@ export const Tweets: FC = () => {
     setVisible((prevValue) => prevValue + 3);
   };
 
-  const selectChecked = (value: any) => {
-    setDefaultSelectValue(value);
+  const selectChecked = (value: SingleValue<ISelectItem>) => {
+    setDefaultSelectValue(value as ISelectItem);
   };
 
   useEffect(() => {
