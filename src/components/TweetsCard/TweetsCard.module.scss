@@ -1,0 +1,92 @@
+.card_wrapper {
+  width: 380px;
+  height: 460px;
+
+  position: relative;
+
+  background: url("../../assets/img/logo.png") no-repeat 20px 20px,
+    url("../../assets/img/bg.png") no-repeat center 28px,
+    linear-gradient(
+      142.17deg,
+      rgb(71, 28, 169) -1.144%,
+      rgb(87, 54, 163) 61.277%,
+      rgb(75, 42, 153) 86.102%
+    );
+
+  border-radius: 20px;
+
+  box-shadow: -2.58px 6.87px 20.62px 0 rgba(0, 0, 0, 0.23);
+
+  margin-bottom: 20px;
+}
+
+.divider {
+  width: 100%;
+  height: 8px;
+
+  position: absolute;
+  top: 214px;
+
+  background: rgb(235, 216, 255);
+
+  box-shadow: inset 0px 3.44px 2.58px 0px rgb(251, 248, 255),
+    0px 3.44px 3.44px 0px rgba(0, 0, 0, 0.06),
+    inset 0px -1.72px 3.44px 0px rgb(174, 123, 227);
+}
+
+.avatar_wrapper {
+  width: 80px;
+  height: 80px;
+
+  background-color: rgb(87, 54, 163);
+
+  position: absolute;
+  top: 214px - 35px;
+  left: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 9px solid rgb(235, 216, 255);
+
+  border-radius: 50%;
+}
+
+.titles_wrapper {
+  padding-top: 284px;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+
+  color: rgb(235, 216, 255);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 16px;
+}
+
+.button {
+  width: 196px;
+  height: 50px;
+
+  margin: 26px auto 0;
+
+  padding: 14px 28px;
+
+  border-radius: 10px;
+
+  background-color: rgb(235, 216, 255);
+
+  font-size: 18px;
+  font-weight: 600;
+
+  display: block;
+}
+
+.is-following {
+  background-color: rgb(92, 211, 168);
+}
