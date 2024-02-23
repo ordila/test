@@ -16,7 +16,7 @@ export const TweetsCard: FC<ITweetCard> = ({
   tweets,
   avatar,
   setFollowing,
-  following,
+  // following
 }) => {
   const [arrayID, setArrayID] = useState<TId[]>([]);
 
