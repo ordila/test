@@ -107,6 +107,16 @@ export const Tweets: FC = () => {
   return (
     <div>
       <Select
+        className={styles.select}
+        theme={(theme) => ({
+          ...theme,
+          borderRadius: 0,
+          colors: {
+            ...theme.colors,
+            primary25: "rgb(235, 216, 255)",
+            primary: "rgb(80, 47, 157)",
+          },
+        })}
         options={options}
         onChange={selectChecked}
         defaultValue={defaultSelectValue}

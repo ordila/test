@@ -16,35 +16,28 @@ export const TweetsCard: FC<ITweetCard> = ({
   tweets,
   avatar,
   setFollowing,
-  // following
+  following,
 }) => {
-  const [arrayID, setArrayID] = useState<TId[]>([]);
-
   const [isFollowing, setIsFollowing] = useState(false);
 
-  const { getItem, setItem, removeItem } = localStorageService<TId[]>(
+  const { setItem, removeItem } = localStorageService<TId[]>(
     LOCAL_STORAGE_KEYS.USER_ID
   );
 
   useEffect(() => {
-    const idArr = getItem();
-
-    if (JSON.stringify(idArr) !== JSON.stringify(arrayID)) {
-      setArrayID(idArr);
-      setIsFollowing(idArr.find((el) => el === id) !== undefined);
-    }
-  }, [arrayID, getItem, id]);
+    setIsFollowing(following.find((el) => el === id) !== undefined);
+  }, [id, following]);
 
   const onButtonClick = () => {
-    if (!arrayID.includes(id as TId)) {
+    if (!following.includes(id as TId)) {
       setItem(id);
-      setArrayID([...arrayID, id]);
+
       setFollowing((prevValue: TId[]) => [...prevValue, id]);
 
       setIsFollowing(true);
     } else {
       removeItem(id);
-      setArrayID(arrayID.filter((el) => el !== id));
+
       setFollowing((prevValue: TId[]) => prevValue.filter((el) => el !== id));
 
       setIsFollowing(false);

@@ -22,6 +22,7 @@ export const localStorageService = <TData extends number[]>(
 
     if (newData && !existingData.includes(newData)) {
       const updatedData = [...existingData, newData];
+
       localStorage.setItem(key, JSON.stringify(updatedData));
     }
   };

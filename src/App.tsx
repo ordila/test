@@ -16,7 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path={TWEETS} element={<Tweets />} />
         </Route>
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<Navigate to={HOME} />} />
       </Routes>
     </>
   );
